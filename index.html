@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typewriter Effect</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black; /* Black background */
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .typewriter {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      background-image: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+      white-space: nowrap;
+      overflow: hidden;
+      width: 15ch;
+      animation: typing 4s steps(15, end), blink 0.5s step-end infinite;
+    }
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 15ch;
+      }
+    }
+    @keyframes blink {
+      from, to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: white;
+      }
+    }
+    .typewriter::after {
+      content: '';
+      display: inline-block;
+      margin-left: 5px;
+      border-right: 2px solid white;
+      animation: blink 0.5s step-end infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="typewriter">Kusum is pagalni</div>
+</body>
+</html>
